@@ -37,7 +37,7 @@ jobs:
          working-directory: ./02 Starting Project
          run: npm install
 
-       - name: Run tests
+       - name: Run build
          working-directory: ./02 Starting Project
          run: npm run build
        - name: deploy
