@@ -1,18 +1,24 @@
 name: test-workflow
+
 on: push
+
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v3
-      - name: install node js
+
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-           node-version: 18
-      - name: install dependencies
-        working-directory: ./02 Starting Project
+          node-version: 18
+
+      - name: Install dependencies
+        working-directory: "./02 Starting Project"
         run: npm install
-      - name: run tests
-        working-directory: ./02 Starting Project
+
+      - name: Run tests
+        working-directory: ./02 Starting Project"
         run: npm test
