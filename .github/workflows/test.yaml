@@ -23,6 +23,7 @@ jobs:
         working-directory: ./02 Starting Project
         run: npm test
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
        - name: Checkout code
